@@ -1,20 +1,27 @@
 from flask import Flask
+from flask_cors import CORS
 from config.config import Config
-from blueprints.job_blueprint import job_bp
-from blueprints.interview_blueprint import interview_bp
-from blueprints.feedback_blueprint import feedback_bp
+from services.main import main_bp
 
 def create_app():
     app = Flask(__name__)
+
+    # Load configurations
     app.config.from_object(Config)
 
+    # Enable CORS (adjust if needed for production)
+    CORS(
+        app,
+        resources={r"/api/*": {"origins": "*"}},
+        supports_credentials=True
+    )
+
     # Register blueprints
-    app.register_blueprint(job_bp, url_prefix='/jobs')
-    app.register_blueprint(interview_bp, url_prefix='/interview')
-    app.register_blueprint(feedback_bp, url_prefix='/feedback')
+    app.register_blueprint(main_bp, url_prefix="/api")
 
     return app
 
-if __name__ == '__main__':
+# Entry point
+if __name__ == "__main__":
     app = create_app()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
