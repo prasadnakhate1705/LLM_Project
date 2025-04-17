@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+bs4
+PyPDF2
+flask
+openai
+ffmpeg

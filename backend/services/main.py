@@ -26,6 +26,7 @@ def load_persona(level):
     with open(mode_file, "r", encoding="utf-8") as f:
         return f.read().strip()
 
+
 # === 1. Upload Resume ===
 @main_bp.route('/api/upload_resume', methods=['POST'])
 def upload_resume():
@@ -51,6 +52,7 @@ def upload_resume():
 
     return jsonify({"message": "Resume uploaded successfully", "session_id": session_id}), 200
 
+
 # === 2. Upload Job Description ===
 @main_bp.route('/api/upload_job_description', methods=['POST'])
 def upload_job_description():
@@ -67,6 +69,7 @@ def upload_job_description():
     SESSIONS[session_id]["job_description"] = job_description
 
     return jsonify({"message": "Job description saved successfully"}), 200
+
 
 # === 3. Generate Questions Based on Selections ===
 @main_bp.route('/api/generate_questions', methods=['POST'])

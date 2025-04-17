@@ -1,4 +1,0 @@
-requests
-BeautifulSoup
-bs4
-PyPDF2
