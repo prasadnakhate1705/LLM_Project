@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Dashboard</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            flex-direction: column;
+            align-items: center; /* Center vertically */
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px 0; /* Add padding above and below the header */
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+       
+        main{
+            width: 60%;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;            
+        }
+
+        #details-box{
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        
+
+
+        label{
+            display: block;
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+
+        input[type="file"] {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        select{
+            cursor: pointer;
+            margin-bottom: 10px;
+            
+        }        
+        select, input[type="file"]{
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        
+        #job-description-text {
+            width: 95%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #job-description-text{
+            margin-bottom: 10px;
+        }
+
+        .option{
+            margin-bottom: 2px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Interview Dashboard</h1>
+    <main>
+        <!-- IMPORTANT: Form should wrap BOTH the form container and job description box -->
+        <form action="/interview" method="post" enctype="multipart/form-data">
+                <div id="details-box">
+                        <label for="resume">Upload Resume (PDF or DOC)</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx">
+                        
+                        <label for="interview-type">Interview Type</label>
+                        <div class="option">
+                        <select id="interview-type" name="interview-type">
+                            <option value="behavioral">Behavioral</option>
+                            <option value="technical">Technical</option>
+                            <option value="resume-based">Resume-Based</option>
+                        </select>
+                        </div>
+                        <label for="job-role">Job Role</label>
+                         <div class="option">
+                        <select id="job-role" name="job-role">
+                            <option value="data-scientist">Data Scientist</option>
+                            <option value="software-engineer">Software Engineer</option>
+                            <option value="product-manager">Product Manager</option>
+                        </select>
+                         </div>
+
+                        <label for="difficulty">Difficulty Level</label>
+                        <div class="option">
+                        <select id="difficulty" name="difficulty">
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                        </div>
+
+                        <label for="duration">Preferred Interview Duration</label>
+                        <div class="option">
+                        <select id="duration" name="duration">
+                            <option value="15">15 minutes</option>
+                            <option value="30">30 minutes</option>
+                            <option value="45">45 minutes</option>
+                        </select>
+                         <label for="job-description-text">Paste Job Description</label>
+                         <textarea id="job-description-text" name="job-description-text" placeholder="Paste the job description here..."></textarea>
+                        </div>
+                        <button type="submit">Start Interview</button>
+                </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{
+  "text": " This past is a firecr inverter installed in Byronais, Kentucky 75,000 2222 at really participatory work. Please give it a big hand.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.86,
+      "end": 9.08,
+      "text": " This past is a firecr inverter installed in Byronais, Kentucky",
+      "tokens": [
+        50407,
+        639,
+        1791,
+        307,
+        257,
+        2610,
+        10757,
+        47201,
+        8899,
+        294,
+        3146,
+        2044,
+        1527,
+        11,
+        22369,
+        50818
+      ],
+      "temperature": 1.0,
+      "avg_logprob": -5.488375063295718,
+      "compression_ratio": 0.9866666666666667,
+      "no_speech_prob": 0.38080930709838867
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 9.08,
+      "end": 18.96,
+      "text": " 75,000",
+      "tokens": [
+        50818,
+        9562,
+        11,
+        1360,
+        51312
+      ],
+      "temperature": 1.0,
+      "avg_logprob": -5.488375063295718,
+      "compression_ratio": 0.9866666666666667,
+      "no_speech_prob": 0.38080930709838867
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 18.96,
+      "end": 27.0,
+      "text": " 2222",
+      "tokens": [
+        51312,
+        5853,
+        7490,
+        51714
+      ],
+      "temperature": 1.0,
+      "avg_logprob": -5.488375063295718,
+      "compression_ratio": 0.9866666666666667,
+      "no_speech_prob": 0.38080930709838867
+    },
+    {
+      "id": 3,
+      "seek": 2700,
+      "start": 27.0,
+      "end": 29.0,
+      "text": " at really participatory work.",
+      "tokens": [
+        50364,
+        412,
+        534,
+        3421,
+        4745,
+        589,
+        13,
+        50464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.9426364898681641,
+      "compression_ratio": 0.9180327868852459,
+      "no_speech_prob": 0.08353637903928757
+    },
+    {
+      "id": 4,
+      "seek": 2700,
+      "start": 29.0,
+      "end": 30.0,
+      "text": " Please give it a big hand.",
+      "tokens": [
+        50464,
+        2555,
+        976,
+        309,
+        257,
+        955,
+        1011,
+        13,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.9426364898681641,
+      "compression_ratio": 0.9180327868852459,
+      "no_speech_prob": 0.08353637903928757
+    }
+  ],
+  "language": "en"
+}
